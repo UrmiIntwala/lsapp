@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\MyUser;
+
 
 class SignUpController extends Controller
 {
@@ -36,11 +38,22 @@ class SignUpController extends Controller
     {
         $this->validate($request,[
             'name'=>'required',
-            'emailid'=>'required',
+            'emailid'=>'required|unique:my_users',
             'mobileno'=>'required',
             'password'=>'required'
         ]);
-        return 'done';
+        //MyUser::create($request->all());
+            $emailid=$request['emailid'];
+            $password=$request['password'];
+            $name=$request['name'];
+            $mobileno=$request['mobileno'];
+            $user=new MyUser();
+            $user->emailid=$emailid;
+            $user->password=$password;
+            $user->mobileno=$mobileno;
+            $user->name=$name;
+            $user->save();
+            return 'save';
     }
 
     /**
