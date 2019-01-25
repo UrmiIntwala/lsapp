@@ -11,9 +11,9 @@
           <a class="nav-link nav-hover" href="/" style="color:white; font-size:130%;font-family:Verdana, Geneva, Tahoma, sans-serif">CARS</a>
         </li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class=" navbar-nav navbar-right mr-auto">
         <li class="nav-item ">
-            <a class="nav-link" href="#" style="color:white; font-size:130%;font-family:Verdana, Geneva, Tahoma, sans-serif">HELP&nbsp;&nbsp;</a>
+            <a class="nav-link nav-hover" href="#" style="color:white; font-size:130%;font-family:Verdana, Geneva, Tahoma, sans-serif">HELP&nbsp;&nbsp;</a>
         </li>
         <li class="nav-item">
           <a class="nav-link " href="#myModalSignUp1" data-toggle="modal" data-target="#myModalSignUp1 " 
@@ -121,8 +121,9 @@
 
 
 <!--SIGNUP MODAL-->
-<!-- Modal -->
-{!! Form::open(['action'=>'SignUpController@store','id'=>'reg_form','method'=>'POST','role'=>'form','data-toggle'=>'validator']) !!}
+<!-- Modal -->  
+{!! Form::open(['action'=>'signup','id'=>'reg_form','method'=>'POST','role'=>'form','data-toggle'=>'validator']) !!}
+@csrf
 <div id="myModalSignUp" class="modal fade" role="dialog">
     <div class="modal-dialog modal-lg">
       <!-- Modal content-->
@@ -209,7 +210,7 @@
               <div class="form-group"><center>
                 <input type="email" class="form-control" id="inputEmail" name="emailid" 
                 style="width: 70%" placeholder="Enter your EmailID" 
-                data-error="Bruh, that email address is invalid" required>
+                data-error=" Email address is invalid" required>
                 </center>
                 <div class="help-block with-errors"></div>
               </div>
@@ -418,10 +419,7 @@
             </center></div><br><br>
             <button type="button" class="button btn " href="#">
               <span>LOGIN</span></button> 
-              {{Form::password('password',['class'=>'form-control','style'=>'width: 70%','placeholder'=>'Password (minimum 8 charachters)'])}}
-              {{Form::text('name', '',['class'=>'form-control','style'=>'width: 70%','placeholder'=>'Name as on Driving License'])}}
-              {{Form::email('emailid', 'example@gmail.com',['class'=>'form-control','style'=>'width: 70%','placeholder'=>'Enter your email id'])}}
-              {{Form::text('mobileno', '',['class'=>'form-control','style'=>'width: 70%','placeholder'=>'Enter your mobile no'])}}
+              
           </div>
         </div>
       </div>

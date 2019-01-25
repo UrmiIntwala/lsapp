@@ -22,7 +22,11 @@
         <script src='http://cdnjs.cloudfare.com/ajax/libs/bootstrap-validator/0.11.5/js/bootstrapvalidator.min.js'></script>
         <link  href="{{asset('css/nav.css')}}" rel="stylesheet" type="text/css">
         <link  href="{{asset('css/footer.css')}}" rel="stylesheet" type="text/css">
+        <link  href="{{asset('css/login.css')}}" rel="stylesheet" type="text/css">
         <!--<link rel="stylesheet" href="{{asset('css/app.css')}}">-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        
+
         <title>{{config('app.name','CAR_RENTAL')}}</title>
 
 
@@ -31,9 +35,6 @@
     </head>
     <body>
         @include('inc.navbar')
-        <br>
-        <br>
-        <br>
         <div class="container">
             @include('inc.messages')
             @yield('content') 
