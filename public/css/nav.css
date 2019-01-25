@@ -17,7 +17,7 @@ nav a:after {
 
 nav a:hover:after {
 	width: 100%;
-    background: white;
+  
 }
 nav a:hover{
 	opacity:1;

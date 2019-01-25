@@ -12,7 +12,7 @@
 */
 
 Route::get('/','LoginController@index');
-
+Route::resource('signup','SignUpController');
 /*Route::get('/', function () {
     return view('welcome');
 });*/
