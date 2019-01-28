@@ -122,7 +122,7 @@
 
 <!--SIGNUP MODAL-->
 <!-- Modal -->  
-{!! Form::open(['action'=>'signup','id'=>'reg_form','method'=>'POST','role'=>'form','data-toggle'=>'validator']) !!}
+{!! Form::open(['uri'=>'signup','id'=>'reg_form','method'=>'POST','role'=>'form','data-toggle'=>'validator']) !!}
 @csrf
 <div id="myModalSignUp" class="modal fade" role="dialog">
     <div class="modal-dialog modal-lg">
